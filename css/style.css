@@ -793,7 +793,6 @@ button {
 
 .portfolio-project {
     width: 370px;
-    transition: var(--cubic) var(--transition-timing);
 }
 
 .portfolio-project:hover .portfolio-project .portfolio-link {
@@ -801,17 +800,26 @@ button {
     position: relative;
 }
 
-.portfolio-link {
-    transition: var(--cubic) var(--transition-timing);
-}
+.portfolio-link {}
+
+
 
 .portfolio-link:hover,
 .portfolio-link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    opacity: 1;
 }
 
 .portfolio-link:hover .container-position-portfolio {
+    transform: translateY(0);
     opacity: 1;
+    transition: var(--cubic) var(--transition-timing);
+}
+
+.portfolio-link:focus .container-position-portfolio {
+    transform: translateY(0);
+    opacity: 1;
+    transition: var(--cubic) var(--transition-timing);
 }
 
 .portfolio-images {}
@@ -819,7 +827,6 @@ button {
 .portfolio-img-position {
     position: relative;
     overflow: hidden;
-    transition: var(--cubic) var(--transition-timing);
 }
 
 .container-position-portfolio {
@@ -832,10 +839,6 @@ button {
     opacity: 0;
     transform: translateY(101%);
     transition: var(--cubic) var(--transition-timing);
-}
-
-.portfolio-img-position:hover .container-position-portfolio {
-    transform: translateY(0);
 }
 
 .text-position {

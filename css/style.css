@@ -38,7 +38,6 @@ body {
 .header-link:hover,
 .header-link:focus {
     color: #2196f3;
-    transition: var(--transition-timing) var(--cubic);
 }
 
 .link-text {
@@ -221,12 +220,13 @@ button {
     padding-top: 32px;
     padding-bottom: 32px;
     position: relative;
+
+    transition: var(--cubic) var(--transition-timing);
 }
 
 .header-link:hover,
 .header-link:focus {
     color: #2196f3;
-    transform: var(--transition-timing) var(--cubic);
 }
 
 .current {
@@ -272,7 +272,6 @@ button {
 .header-tel:hover,
 .header-tel:focus {
     color: var(--main-order-service);
-    transition: var(--transition-timing) var(--cubic);
 }
 
 /* < !-------------HERO--------- !> */
@@ -324,12 +323,13 @@ button {
     max-height: 50px;
     border: none;
     border-radius: 4px;
+
+    transition: var(--cubic) var(--transition-timing);
 }
 
 .hero-btn:hover,
 .hero-btn:focus {
     background-color: #188ce8;
-    transition: var(--transition-timing) var(--cubic);
 }
 
 /* < !--------------FEATURES------------------ !> */
@@ -511,6 +511,8 @@ button {
     border-radius: 50%;
     width: 44px;
     height: 44px;
+
+    transition: var(--cubic) var(--transition-timing);
 }
 
 .team-icon {
@@ -523,9 +525,56 @@ button {
 .team-address-icon:focus {
     background: var(--main-order-service);
     color: var(--main-btn-color);
-    transition: var(--transition-timing) var(--cubic);
 }
 
+/*--------------------------------------regular customers----------------------------------------*/
+
+.customers {
+    padding: 94px 0;
+
+}
+
+.customers-title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: #212121;
+}
+
+.customers-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.customers-link-logo {
+    display: flex;
+    width: 170px;
+    height: 92px;
+    justify-content: center;
+    align-items: center;
+    color: #afb1b8;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+}
+
+.costomers-img-logo {
+    fill: currentColor;
+    transition: var(--cubic) var(--transition-timing);
+}
+
+.customers-link-logo:hover,
+.customers-link-logo:focus {
+    color: var(--main-order-service);
+    border-color: var(--main-order-service);
+}
 
 /* < !---------------------FOOTER-------------------- !> */
 
@@ -619,12 +668,13 @@ button {
     display: block;
     display: flex;
     align-items: center;
+
+    transition: var(--cubic) var(--transition-timing);
 }
 
 .footer-link:hover,
 .footer-link:focus {
     color: #2196f3;
-    transition: var(--transition-timing) var(--cubic);
 }
 
 .footer-address-icon {
@@ -636,6 +686,8 @@ button {
     border-radius: 50%;
     width: 44px;
     height: 44px;
+
+    transition: var(--cubic) var(--transition-timing);
 }
 
 .footer-icon {
@@ -645,7 +697,6 @@ button {
 .footer-address-icon:hover,
 .footer-address-icon:focus {
     background: #2196f3;
-    transition: var(--transition-timing) var(--cubic);
 }
 
 .footer-thumb {
@@ -689,6 +740,8 @@ button {
     background: var(--main-navi-btn-background);
     padding: 6px 22px;
     border: transparent;
+
+    transition: var(--cubic) var(--transition-timing);
 }
 
 .navi-btn:hover,
@@ -697,7 +750,6 @@ button {
     color: var(--main-btn-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
         0px 2px 2px rgba(0, 0, 0, 0.12);
-    transition: var(--transition-timing) var(--cubic);
 }
 
 
@@ -708,12 +760,13 @@ button {
     border-bottom: 1px solid var(--border-color-cards);
     border-right: 1px solid var(--border-color-cards);
     border-left: 1px solid var(--border-color-cards);
+
+    transition: var(--cubic) var(--transition-timing);
 }
 
 .portfolio-project:hover {
     border: 1px solid #EEEEEE;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-    transition: var(--cubic) var(--transition-timing);
 }
 
 .portfolio {
@@ -740,24 +793,25 @@ button {
 
 .portfolio-project {
     width: 370px;
-
+    transition: var(--cubic) var(--transition-timing);
 }
 
 .portfolio-project:hover .portfolio-project .portfolio-link {
     display: block;
     position: relative;
-    transition: var(--transition-timing) var(--cubic);
+}
+
+.portfolio-link {
+    transition: var(--cubic) var(--transition-timing);
 }
 
 .portfolio-link:hover,
 .portfolio-link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-    transition: var(--transition-timing) var(--cubic);
 }
 
 .portfolio-link:hover .container-position-portfolio {
     opacity: 1;
-    transition: var(--transition-timing) var(--cubic);
 }
 
 .portfolio-images {}
@@ -765,6 +819,7 @@ button {
 .portfolio-img-position {
     position: relative;
     overflow: hidden;
+    transition: var(--cubic) var(--transition-timing);
 }
 
 .container-position-portfolio {
@@ -815,53 +870,4 @@ button {
     letter-spacing: 0.03em;
     color: var(--main-Portfolio-text-color);
 
-}
-
-/*--------------------------------------regular customers----------------------------------------*/
-
-.customers {
-    padding: 94px 0;
-
-}
-
-.customers-title {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.16;
-    text-align: center;
-    letter-spacing: 0.03em;
-
-    color: #212121;
-}
-
-.customers-logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    margin-top: 50px;
-}
-
-.customers-link-logo {
-    display: flex;
-    width: 170px;
-    height: 92px;
-    justify-content: center;
-    align-items: center;
-    color: #afb1b8;
-    border: 1px solid #afb1b8;
-    border-radius: 4px;
-}
-
-.costomers-img-logo {
-    fill: currentColor;
-}
-
-.customers-link-logo:hover,
-.customers-link-logo:focus {
-    color: var(--main-order-service);
-    border-color: var(--main-order-service);
-    transition: var(--transition-timing) var(--cubic);
 }

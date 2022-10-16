@@ -24,6 +24,9 @@ body {
     --border-color-cards: #eeeeee;
     --raleway: 'raleway', sans-serif;
     --roboto: 'roboto', sans-serif;
+
+    --transition-timing: 250ms;
+    --cubic: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list-styles {
@@ -35,6 +38,7 @@ body {
 .header-link:hover,
 .header-link:focus {
     color: #2196f3;
+    transition: var(--transition-timing) var(--cubic);
 }
 
 .link-text {
@@ -108,8 +112,54 @@ button {
     padding: 0 15px;
 }
 
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    visibility: visible;
+    opacity: 1;
+    transition: opacity var(--transition-timing) var(--cubic),
+        visibility var(--transition-timing) var(--cubic);
+}
 
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
 
+.modal {
+    min-width: 528px;
+    min-height: 581px;
+    background-color: #FFFFFF;
+    position: absolute;
+    padding: 17px 17px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.model-tap {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--main-btn-color);
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-close {}
+
+.modal-close-tap {}
 
 
 /* < !--------header-------- !> */
@@ -162,25 +212,39 @@ button {
 }
 
 .header-link {
-    display: block;
-    font-family: 'Roboto';
+    color: var(--main-link-color);
+    text-decoration: none;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    color: var(--main-link-color);
-    display: block;
-    display: flex;
-    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    position: relative;
 }
 
 .header-link:hover,
 .header-link:focus {
     color: #2196f3;
+    transform: var(--transition-timing) var(--cubic);
 }
 
 .current {
     color: #2196F3;
+}
+
+.current::after {
+    position: absolute;
+    content: '';
+    display: block;
+
+    left: 0;
+    bottom: 0px;
+
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #2196f3;
 }
 
 .header-contact {
@@ -208,6 +272,7 @@ button {
 .header-tel:hover,
 .header-tel:focus {
     color: var(--main-order-service);
+    transition: var(--transition-timing) var(--cubic);
 }
 
 /* < !-------------HERO--------- !> */
@@ -264,6 +329,7 @@ button {
 .hero-btn:hover,
 .hero-btn:focus {
     background-color: #188ce8;
+    transition: var(--transition-timing) var(--cubic);
 }
 
 /* < !--------------FEATURES------------------ !> */
@@ -375,6 +441,7 @@ button {
 .team {
     background: #F5F4FA;
     padding-top: 94px;
+    padding-bottom: 94px;
 }
 
 .team-title {
@@ -406,6 +473,7 @@ button {
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
+
 
 .team-item-title {
     font-family: 'Roboto';
@@ -455,6 +523,7 @@ button {
 .team-address-icon:focus {
     background: var(--main-order-service);
     color: var(--main-btn-color);
+    transition: var(--transition-timing) var(--cubic);
 }
 
 
@@ -540,7 +609,23 @@ button {
     text-transform: uppercase;
 }
 
-.footer-link-icon {}
+.footer-link {
+    display: block;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    display: block;
+    display: flex;
+    align-items: center;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+    color: #2196f3;
+    transition: var(--transition-timing) var(--cubic);
+}
 
 .footer-address-icon {
     display: flex;
@@ -560,6 +645,7 @@ button {
 .footer-address-icon:hover,
 .footer-address-icon:focus {
     background: #2196f3;
+    transition: var(--transition-timing) var(--cubic);
 }
 
 .footer-thumb {
@@ -611,6 +697,7 @@ button {
     color: var(--main-btn-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
         0px 2px 2px rgba(0, 0, 0, 0.12);
+    transition: var(--transition-timing) var(--cubic);
 }
 
 
@@ -621,6 +708,12 @@ button {
     border-bottom: 1px solid var(--border-color-cards);
     border-right: 1px solid var(--border-color-cards);
     border-left: 1px solid var(--border-color-cards);
+}
+
+.portfolio-project:hover {
+    border: 1px solid #EEEEEE;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    transition: var(--cubic) var(--transition-timing);
 }
 
 .portfolio {
@@ -650,16 +743,61 @@ button {
 
 }
 
-.portfolio-link {
+.portfolio-project:hover .portfolio-project .portfolio-link {
     display: block;
+    position: relative;
+    transition: var(--transition-timing) var(--cubic);
 }
 
 .portfolio-link:hover,
 .portfolio-link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    transition: var(--transition-timing) var(--cubic);
+}
+
+.portfolio-link:hover .container-position-portfolio {
+    opacity: 1;
+    transition: var(--transition-timing) var(--cubic);
 }
 
 .portfolio-images {}
+
+.portfolio-img-position {
+    position: relative;
+    overflow: hidden;
+}
+
+.container-position-portfolio {
+    position: absolute;
+    display: flex;
+    top: 0px;
+    background: rgba(33, 150, 243, 0.9);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: translateY(101%);
+    transition: var(--cubic) var(--transition-timing);
+}
+
+.portfolio-img-position:hover .container-position-portfolio {
+    transform: translateY(0);
+}
+
+.text-position {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    /* or 156% */
+
+    letter-spacing: 0.03em;
+
+    color: #FFFFFF;
+
+    padding: 64px 24px;
+}
+
 
 .portfolio-sub-title {
     font-weight: 700;
@@ -725,4 +863,5 @@ button {
 .customers-link-logo:focus {
     color: var(--main-order-service);
     border-color: var(--main-order-service);
+    transition: var(--transition-timing) var(--cubic);
 }

@@ -200,8 +200,6 @@ button {
     align-items: center;
     display: flex;
     margin-left: 93px;
-    padding-top: 32px;
-    padding-bottom: 32px;
 }
 
 .header-item {}
@@ -219,9 +217,11 @@ button {
     letter-spacing: 0.02em;
     padding-top: 32px;
     padding-bottom: 32px;
+    display: flex;
+    align-items: center;
     position: relative;
 
-    transition: var(--cubic) var(--transition-timing);
+    transition: color var(--cubic), var(--transition-timing);
 }
 
 .header-link:hover,
@@ -324,7 +324,7 @@ button {
     border: none;
     border-radius: 4px;
 
-    transition: var(--cubic) var(--transition-timing);
+    transition:color var(--cubic), background var(--transition-timing);
 }
 
 .hero-btn:hover,
@@ -412,7 +412,6 @@ button {
 
 .work-photo {
     position: relative;
-    bottom: 0;
 }
 
 .work-text {
@@ -422,16 +421,13 @@ button {
     justify-content: center;
 
     bottom: 0;
-    left: 0;
     height: 70px;
     width: 100%;
 
     background-color: rgba(47, 48, 58, 0.8);
     color: #ffffff;
     font-weight: 700;
-    font-size: 14px;
     line-height: 1.14;
-    letter-spacing: 0.03em;
     text-transform: uppercase;
 }
 
@@ -512,7 +508,7 @@ button {
     width: 44px;
     height: 44px;
 
-    transition: var(--cubic) var(--transition-timing);
+    transition: color var(--cubic), background var(--transition-timing);
 }
 
 .team-icon {
@@ -563,11 +559,11 @@ button {
     color: #afb1b8;
     border: 1px solid #afb1b8;
     border-radius: 4px;
-}
+
+    transition: color var(--cubic), var(--transition-timing);}
 
 .costomers-img-logo {
     fill: currentColor;
-    transition: var(--cubic) var(--transition-timing);
 }
 
 .customers-link-logo:hover,
@@ -663,13 +659,13 @@ button {
     font-family: 'Roboto';
     font-weight: 500;
     font-size: 14px;
-    line-height: 1.14;
+    line-height: 1.71;
     letter-spacing: 0.02em;
     display: block;
     display: flex;
     align-items: center;
 
-    transition: var(--cubic) var(--transition-timing);
+    transition:color var(--cubic),background var(--transition-timing);
 }
 
 .footer-link:hover,
@@ -687,7 +683,7 @@ button {
     width: 44px;
     height: 44px;
 
-    transition: var(--cubic) var(--transition-timing);
+    transition:color var(--cubic),background var(--transition-timing);
 }
 
 .footer-icon {
@@ -739,9 +735,9 @@ button {
     color: var(--mine-navi-btn-color);
     background: var(--main-navi-btn-background);
     padding: 6px 22px;
-    border: transparent;
+    border: none;
 
-    transition: var(--cubic) var(--transition-timing);
+    transition:color var(--cubic),background, var(--transition-timing);
 }
 
 .navi-btn:hover,
@@ -761,12 +757,12 @@ button {
     border-right: 1px solid var(--border-color-cards);
     border-left: 1px solid var(--border-color-cards);
 
-    transition: var(--cubic) var(--transition-timing);
+    /* transition: var(--cubic) var(--transition-timing); */
 }
 
 .portfolio-project:hover {
-    border: 1px solid #EEEEEE;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    /* border: 1px solid #EEEEEE; */
+    /* box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16); */
 }
 
 .portfolio {
@@ -800,26 +796,28 @@ button {
     position: relative;
 }
 
-.portfolio-link {}
+.portfolio-link {
+    display: block;
+transition:box-shadow var(--cubic),box-shadow var(--transition-timing);
+}
 
 
 
 .portfolio-link:hover,
 .portfolio-link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-    opacity: 1;
 }
 
 .portfolio-link:hover .container-position-portfolio {
     transform: translateY(0);
     opacity: 1;
-    transition: var(--cubic) var(--transition-timing);
+    /* transition: var(--cubic) var(--transition-timing); */
 }
 
 .portfolio-link:focus .container-position-portfolio {
     transform: translateY(0);
     opacity: 1;
-    transition: var(--cubic) var(--transition-timing);
+    transition: var(--cubic), var(--transition-timing);
 }
 
 .portfolio-images {}
@@ -838,7 +836,7 @@ button {
     height: 100%;
     opacity: 0;
     transform: translateY(101%);
-    transition: var(--cubic) var(--transition-timing);
+    transition: var(--cubic), var(--transition-timing);
 }
 
 .text-position {

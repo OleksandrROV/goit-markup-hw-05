@@ -17,39 +17,39 @@
 
 <body>
   <!-- Шапка -->
-    <header class="header">
-      <div class="container ">
-        <section class="main-nav">
-          <nav class="header-navigation">
-            <a class="header-logo link-text" href="./index.html">Web<span class="header-studio">Studio</span></a>
-            <ul class="header-list list-styles">
-              <li class="header-item"><a class="header-link link-text current" href="./index.html">Студія</a>
-              </li>
-              <li class="header-item">
-                <a class="header-link link-text" href="./portfolio.html">Портфоліо</a>
-              </li>
-              <li class="header-item"><a class="header-link link-text" href="">Контакти</a></li>
-            </ul>
-          </nav>
-          <ul class="header-contact list-styles">
-            <li class="header-contact-link">
-              <a class="header-mail header-link link-text" href="mailto:info@devstudio.com">
-                <svg class="header-img-logo costomers-img-logo" width="16" height="12">
-                  <use href="./images/symbol-defs.svg#icon-mail"></use>
-                </svg>
-                info@devstudio.com</a>
+  <header class="header">
+    <div class="container ">
+      <section class="main-nav">
+        <nav class="header-navigation">
+          <a class="header-logo link-text" href="./index.html">Web<span class="header-studio">Studio</span></a>
+          <ul class="header-list list-styles">
+            <li class="header-item"><a class="header-link link-text current" href="./index.html">Студія</a>
             </li>
-            <li class="header-contact-link">
-              <a class="header-tel header-link link-text" href="tel:+380961111111">
-                <svg class="header-img-logo costomers-img-logo" width="10" height="16">
-                  <use href="./images/symbol-defs.svg#icon-tel"></use>
-                </svg>
-                +38 096 111 11 11</a>
+            <li class="header-item">
+              <a class="header-link link-text" href="./portfolio.html">Портфоліо</a>
             </li>
+            <li class="header-item"><a class="header-link link-text" href="">Контакти</a></li>
           </ul>
-        </section>
-      </div>
-    </header>
+        </nav>
+        <ul class="header-contact list-styles">
+          <li class="header-contact-link">
+            <a class="header-mail header-link link-text" href="mailto:info@devstudio.com">
+              <svg class="header-img-logo costomers-img-logo" width="16" height="12">
+                <use href="./images/symbol-defs.svg#icon-mail"></use>
+              </svg>
+              info@devstudio.com</a>
+          </li>
+          <li class="header-contact-link">
+            <a class="header-tel header-link link-text" href="tel:+380961111111">
+              <svg class="header-img-logo costomers-img-logo" width="10" height="16">
+                <use href="./images/symbol-defs.svg#icon-tel"></use>
+              </svg>
+              +38 096 111 11 11</a>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </header>
   <!-- секція 1 -->
   <main>
     <section class="hero">
@@ -403,15 +403,24 @@
       </div>
     </div>
   </footer>
-<div class="backdrop is-hidden" data-modal>
-  <div class="modal">
-    <button class="model-tap" data-modal-close>
-      <svg class="modal-close" widht="18" height="18">
-        <use class="modal-close-tap" href="./images/symbol-defs.svg#icon-close"></use>
-      </svg>
-    </button>
+  <div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+      <button class="model-tap" data-modal-close>
+        <svg
+            width="11"
+            height="11"
+            viewBox="0 0 11 11"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M11 1.10786L9.89214 0L5.5 4.39214L1.10786 0L0 1.10786L4.39214 5.5L0 9.89214L1.10786 11L5.5 6.60786L9.89214 11L11 9.89214L6.60786 5.5L11 1.10786Z"
+              fill="black"
+            />
+          </svg>
+      </button>
+    </div>
   </div>
-</div>
   <script src="./js/modal.js"></script>
 </body>
 
